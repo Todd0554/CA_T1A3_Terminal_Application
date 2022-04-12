@@ -1,16 +1,16 @@
 module ProductList
     
     LIST = {"guitar": {"tele": 1600, 
-                    "gibson": 2300, 
-                    "stra": 1400, 
-                    "maton": 1800},
+                    "gibson sg": 2336, 
+                    "stra": 1443, 
+                    "maton": 1899},
             "amplifier": {"fishman": 650, 
-                        "marshall": 900, 
-                        "blackstar": 400},
-            "pedal": {"overdrive": 200, 
-                    "reverb": 150, 
-                    "delay": 180, 
-                    "looper": 400}}
+                        "marshall": 989, 
+                        "blackstar": 455},
+            "pedal": {"overdrive": 216, 
+                    "reverb": 158, 
+                    "delay": 188, 
+                    "looper": 466}}
     
 end
 

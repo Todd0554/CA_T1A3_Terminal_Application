@@ -1,16 +1,29 @@
+require './module_service'
+
 class Order
-    
-    def show_price_list(hash_of_list)
-        hash_of_list.each do |product, price|
+    attr_reader :price_of_item
+    include Service
+    def initialize(price_of_item = 0)
+        @price_of_item = price_of_item
+    end
+
+    def show_price_list(hash_of_product)
+        hash_of_product.each do |product, price|
             puts "#{product}: $#{price}"
         end
     end
     
-    def price_caculator(price_of_item)
-        total_price =price_of_item
+    def get_price(hash_of_product, name_of_item)
+        @price_of_item = hash_of_product[name_of_item.to_sym].to_f
     end
-
-
 end
+
+
+
+
+
+
+
+
 
 

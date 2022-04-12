@@ -3,8 +3,8 @@ require_relative '../code_music'
 require_relative '../order'
 require_relative '../module_service'
 
-describe Service do # moudle Service: test of pay_by_cash method
-    it 'should caculate the change if customers want to use cash.' do
+describe Service do 
+    it 'should caculate the change if customers want to use cash.' do # moudle Service: test of pay_by_cash method
         class A
             include Service
         end
@@ -13,13 +13,31 @@ describe Service do # moudle Service: test of pay_by_cash method
     end
 end
 
-describe Order do # class Order: test of show_price_list method
-    it 'should show the name and the price of each product.' do
+describe Order do 
+    it 'should show the name and the price of each product.' do # class Order: test of show_price_list method
         guitar = {"tele": 1600, 
-                  "gibson": 2300}
+                  "gibson sg": 2336}
         guitar_list = Order.new
         a = guitar.each do |product, price|
             puts "#{product}: $#{price}"end
         expect(guitar_list.show_price_list(guitar)).to be(a)
+    end
+
+    it 'should give the price of the item in float.' do # class Order: test of get_price method
+        a = Order.new
+        a.get_price({"tele": 1600, 
+            "gibson": 2336, 
+            "stra": 1443, 
+            "maton": 1899}, "tele")
+        expect(a.price_of_item).to eq(1600.0)
+    end
+end
+
+
+
+describe CodeMusic do
+    it 'should give 80 percent of discount for CA students.' do
+        test_money = CodeMusic.new
+        expect(test_money.discount_for_CA_student(1000)).to eq(800)
     end
 end
