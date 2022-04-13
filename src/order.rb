@@ -9,7 +9,6 @@ class Order #order class which provide basic methods including show_price_list a
     end
 
     def show_price_list(hash_of_product) # show customer the list of the products they wanna buy
-        
         hash_of_product.each do |product, price|
             puts "#{product}".colorize(:yellow) + ": " + "$".colorize(:red) + "#{price}".colorize(:green)
         end

@@ -1,6 +1,7 @@
 require 'colorize'
 
 module ProductList 
+    # product list
     LIST = {"guitar": {"tele": 1600, 
                     "gibson sg": 2336, 
                     "stra": 1443, 
@@ -12,6 +13,7 @@ module ProductList
                     "reverb": 158, 
                     "delay": 188, 
                     "looper": 466}}
+    # code music LOGO
     LOGO = [' 
          $$$$$$\                  $$\                 $$\      $$\                     $$\           
         $$  __$$\                 $$ |                $$$\    $$$ |                    \__|          
