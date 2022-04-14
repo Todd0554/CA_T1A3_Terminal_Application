@@ -33,8 +33,6 @@ describe Order do
     end
 end
 
-
-
 describe CodeMusic do
     it 'should give 80 percent of discount for CA students.' do
         test_money = CodeMusic.new

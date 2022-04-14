@@ -2,9 +2,11 @@ require './product_list'
 require './order'
 require './module_service'
 require 'colorize'
+require 'tty-table'
+
 
 class CodeMusic < Order # CodeMusic class inherits from class Order
-   
+    
     def initialize(final_money = 0)  
         @final_money = final_money
     end
@@ -18,9 +20,10 @@ class CodeMusic < Order # CodeMusic class inherits from class Order
         welcome("Code Music".colorize(:blue)) # say hi to customers
         total_price = 0 # set an initial total price
         shopping = true # set a boolean to control whether the shopping continue
-        while shopping == true # when shopping is true, the programme will continue
+        while shopping == true # when shopping is true, the programme will continue 
+            puts (ProductList::LISTTABLE).render(:ascii).colorize(:blue) # show the table of product list by using tty-table
             puts "What kind of " + "music instruments".colorize(:green) + " do you want to buy, " + "guitar".colorize(:yellow) + ", " + "amplifier".colorize(:yellow) + " or " + "pedal".colorize(:yellow) + "?"# ask what kind of products customer wanna buy
-            music_instrument_type = gets.chomp # get the reply into string
+            music_instrument_type = gets.chomp.downcase # get the reply into string
             
                 begin # use exception handling
                     type = ProductList::LIST[music_instrument_type.to_sym]
@@ -31,7 +34,7 @@ class CodeMusic < Order # CodeMusic class inherits from class Order
         
             if ProductList::LIST.has_key?(music_instrument_type.to_sym) # if customer insert the word of 'guitar', 'amplifier' and 'pedal'
                 puts "Which one do you want?" # ask customer which product they wanna buy
-                product_chosen_by_customer = gets.chomp
+                product_chosen_by_customer = gets.chomp.downcase
                 
                 if !type.has_key?(product_chosen_by_customer.to_sym) # if customer did not insert correct word
                     puts "Please insert correct name of the product.".colorize(:red)
@@ -59,6 +62,8 @@ class CodeMusic < Order # CodeMusic class inherits from class Order
             puts "Totally #{total_price.to_s.colorize(:red)} dollar, are you a student of Code Academy? y/n" # ask again
             student_of_CA = gets.chomp
         end
+
+
 
         if student_of_CA == "y" # if customer is CA student
             discount_for_CA_student(total_price) # give a discount on total price
@@ -91,5 +96,5 @@ class CodeMusic < Order # CodeMusic class inherits from class Order
     end
 end
 
-todd = CodeMusic.new
-todd.shopping_in_CodeMusic
+xinzhe = CodeMusic.new
+xinzhe.shopping_in_CodeMusic
