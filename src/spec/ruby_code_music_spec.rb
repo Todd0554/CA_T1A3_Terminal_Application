@@ -39,3 +39,4 @@ describe CodeMusic do
         expect(test_money.discount_for_CA_student(1000)).to eq(800)
     end
 end
+
