@@ -1,25 +1,25 @@
-# Introduction
+# Introduction  
 ***
-#### ***Code Music*** is an terminal application which can provide basic shopping service of selling music instruments.
+#### ***Code Music*** is an terminal  application which can provide basic shopping service of selling music instruments.  
 
-# Github Repository
+# Github Repository  
 ***
-#### https://github.com/Todd0554/CA_T1A3_Terminal_Application
+#### https://github.com/Todd0554/CA_T1A3_Terminal_Application  
 
-# Documentation
+# Documentation  
 ***
-## 1. 'docs' Folder
-#### This folder cotains the screenshots used in markdown documentation.
-## 2. 'ppt' Folder
-#### This folder contains the ppt for presentation.
-## 3. 'README.md' File
-#### This markdown file provides an overview and instruction of the programme.
-## 4. 'src' Folder
-#### This folder contains .rb files of the programms and in these files, the main code are saved.
-1. ***'bin', 'spec', 'Gemfile' and 'Gemfile.lock'***
-   These folders and files provide ruby gem for this programme, including Rspec, colorize and tty-table.
-2. ***'code_music.rb'***
-   This .rb file is the main programme of this terminal application. There is a class of ***CodeMusic*** inside and in this class, the method of ***'shopping_in_CodeMusic'*** contains complete process of shopping. The codes with notes are shown below
+## 1. 'docs' Folder  
+#### This folder cotains the screenshots used in markdown documentation.  
+## 2. 'ppt' Folder  
+#### This folder contains the ppt for presentation.  
+## 3. 'README.md' File  
+#### This markdown file provides an overview and instruction of the programme.  
+## 4. 'src' Folder  
+#### This folder contains .rb files of the programms and in these files, the main code are saved.  
+1. ***'bin', 'spec', 'Gemfile' and 'Gemfile.lock'***  
+   These folders and files provide ruby gem for this programme, including Rspec, colorize and tty-table.  
+2. ***'code_music.rb'***  
+   This .rb file is the main programme of this terminal application. There is a class of ***CodeMusic*** inside and in this class, the method of ***'shopping_in_CodeMusic'*** contains complete process of shopping. The codes with notes are shown below.  
 ```ruby
 
     require './product_list'
@@ -146,8 +146,8 @@
         end
     end
 ```
-4. ***'order.rb'***
-   This .rb file contains a class of ***'Order'***, which provide order methods including ***'show_price_list'*** and ***'get_price'*** for CodeMusic. The codes are shown below.
+4. ***'order.rb'***  
+   This .rb file contains a class of ***'Order'***, which provide order methods including ***'show_price_list'*** and ***'get_price'*** for CodeMusic. The codes are shown below.  
 ```ruby
     require './module_service'
     require 'colorize'
@@ -170,8 +170,8 @@
         end
     end
 ```
-5. ***'product_list.rb'***
-   This .rb file contains another module called ***'ProductList'***, and this module provides the logo of the terminal application, list of products and price and the table of the products. The codes are shown below.
+5. ***'product_list.rb'***  
+   This .rb file contains another module called ***'ProductList'***, and this module provides the logo of the terminal application, list of products and price and the table of the products. The codes are shown below.  
 ```ruby
     require 'colorize'
     require 'tty-table'
@@ -205,9 +205,9 @@
                                                                                                         '.colorize(:blue)]
     end
 ```
-# Gems Used
-1. ***'rspec'***
-   This gem is used to do rspec test for the programme. There are 3 main methods are tested in this section. The codes are below.
+# Gems Used  
+1. ***'rspec'***  
+   This gem is used to do rspec test for the programme. There are 3 main methods are tested in this section. The codes are below.  
 ```ruby
     require_relative '../product_list'
     require_relative '../code_music'
@@ -251,26 +251,26 @@
         end
     end
 ```
-   The rspec test can be executed by using 'rspec' code under the path of 'src' folder. The result is shown below.
+   The rspec test can be executed by using 'rspec' code under the path of 'src' folder. The result is shown below.  
    ![result of rspec](/docs/Screen%20Shot%202022-04-17%20at%2018.39.48.png)
-2. ***'tty-table'***
-   ***'tty-table'*** is another ruby gem used in this programme. For this programme, ***'tty-table'*** is used to establish the table of the products. The code is shown below.
+2. ***'tty-table'***  
+   ***'tty-table'*** is another ruby gem used in this programme. For this programme, ***'tty-table'*** is used to establish the table of the products. The code is shown below.  
 ```ruby
    LISTTABLE = TTY::Table.new(["Guitar", "Amplifier", "Pedal"], [["tele: 1600", "fishman: 650", "overdrive: 216"], ["gibson sg: 2336","marshall: 989", "reverb: 158"], ["stra: 1443", "blackstar: 455", "delay: 188"], ["maton: 1899","mesa: 999", "looper: 466"]])
 ```
-   The code call this table is shown below.
+   The code call this table is shown below.  
 ```ruby
    puts (ProductList::LISTTABLE).render(:ascii).colorize(:blue) # show the table of product list by using tty-table
 ```
-   The result is like this.
-   ![result of tty-table](/docs/Screen%20Shot%202022-04-17%20at%2019.46.46.png)
-3. ***'colorize'***
-   This is the last ruby gem used in this programme. It is used to change the color of the text. 
+   The result is like this.  
+   ![result of tty-table](/docs/Screen%20Shot%202022-04-17%20at%2019.46.46.png)  
+3. ***'colorize'***  
+   This is the last ruby gem used in this programme. It is used to change the color of the text.   
    ![result of colorize](/docs/Screen%20Shot%202022-04-17%20at%2019.53.16.png)
    ![result of colorize](/docs/Screen%20Shot%202022-04-17%20at%2019.54.46.png)
-# Features
-#### 1. Shopping loop system
-This feature let the customers continue to shop if they want to buy more products. I use boolean to control the end of the shopping like this. The notes give the explaination of every code.
+# Features  
+#### 1. Shopping loop system   
+This feature let the customers continue to shop if they want to buy more products. I use boolean to control the end of the shopping like this. The notes give the explaination of every code.  
 ```ruby
 while shopping == true # when shopping is true, the programme will continue 
             puts (ProductList::LISTTABLE).render(:ascii).colorize(:blue) # show the table of product list by using tty-table
@@ -306,8 +306,8 @@ while shopping == true # when shopping is true, the programme will continue
             end
         end
 ```
-#### 2. Payment methods (cash or card)
-the payment method depends on customers' choice. If they want to choose card, every thing gonna be easy, because they just need to tap the card. However, if they choose cash, the changes need to be calculated by the method. 
+#### 2. Payment methods (cash or card)  
+the payment method depends on customers' choice. If they want to choose card, every thing gonna be easy, because they just need to tap the card. However, if they choose cash, the changes need to be calculated by the method.  
 ```ruby
 if how_to_pay == "card" # if customer use card
             pay_by_card()  # call pay_by_card
@@ -322,8 +322,8 @@ if how_to_pay == "card" # if customer use card
                 end
                 pay_by_cash(@final_money, money_customer_paid) # calculate changes
 ```
-#### 3. Exception handling
-This programme will let customer insert many text, so in order to prevent wrong inserts, the codes shown below are used.
+#### 3. Exception handling  
+This programme will let customer insert many text, so in order to prevent wrong inserts, the codes shown below are used.  
 ```ruby
 begin # use exception handling
                     type = ProductList::LIST[music_instrument_type.to_sym]
@@ -332,6 +332,6 @@ begin # use exception handling
                     puts "Please insert guitar, amplifier or pedal.".colorize(:red) # if customer did not insert correct words of 'guitar', 'amplifier' and 'pedal', puts this to tell customer they insert wrong word
                 end
 ```
-If the customer insert a wrong word, the system will let them know which words are valid. The hint is like this. 
+If the customer insert a wrong word, the system will let them know which words are valid. The hint is like this.  
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-17%20at%2020.18.43.png)
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-17%20at%2020.19.19.png)
