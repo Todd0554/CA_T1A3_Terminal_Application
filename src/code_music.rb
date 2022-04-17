@@ -15,7 +15,7 @@ class CodeMusic < Order # CodeMusic class inherits from class Order
         @final_money += total_price * 0.8 
     end
 
-    def shopping_in_CodeMusic
+    def shopping_in_CodeMusic # This is the method of main progress of shopping
         puts ProductList::LOGO # show the LOGO of Code Music
         welcome("Code Music".colorize(:blue)) # say hi to customers
         total_price = 0 # set an initial total price
@@ -96,5 +96,5 @@ class CodeMusic < Order # CodeMusic class inherits from class Order
     end
 end
 
-xinzhe = CodeMusic.new
-xinzhe.shopping_in_CodeMusic
+# xinzhe = CodeMusic.new
+# xinzhe.shopping_in_CodeMusic
