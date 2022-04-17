@@ -1,21 +1,48 @@
 # Introduction  
-***
 #### ***Code Music*** is an terminal  application which can provide basic shopping service of selling music instruments.  
-
-# Github Repository  
 ***
+# Github Repository  
+
 #### https://github.com/Todd0554/CA_T1A3_Terminal_Application  
+***
+
+# How to use
+#### This application is based on ruby, so ruby needs to be installed to your computer. In addition, you also need to install bundle, ruby gem of tty-table and colorize.  
+
+#### There are two ways to use this terminal application. Firstly, you can run ***'code_music.rb'*** directly in your terminal by using 'ruby code_music.rb'. However, before this, the code in line 99 and line 100 of ***'code_music.rb'*** must be transformed from notes into valid code like this.  
+```ruby
+    # xinzhe = CodeMusic.new
+    # xinzhe.shopping_in_CodeMusic
+```
+```ruby
+    xinzhe = CodeMusic.new
+    xinzhe.shopping_in_CodeMusic
+```
+#### The second method is going to irb and load ***'code_music.rb'*** without change the codes above into valid code. Then enter them in irb environment like this.  
+![Exceptional Handling](/docs/Screen%20Shot%202022-04-18%20at%2009.21.50.png)  
+
+# Project Mnagement
+#### I use Trello to manage this project. Until now, the progress is like this.  
+![Exceptional Handling](/docs/Screen%20Shot%202022-04-18%20at%2009.29.07.png)  
 
 # Documentation  
-***
+
 ## 1. 'docs' Folder  
+
 #### This folder cotains the screenshots used in markdown documentation.  
+
 ## 2. 'ppt' Folder  
+
 #### This folder contains the ppt for presentation.  
+
 ## 3. 'README.md' File  
+
 #### This markdown file provides an overview and instruction of the programme.  
+
 ## 4. 'src' Folder  
+
 #### This folder contains .rb files of the programms and in these files, the main code are saved.  
+
 1. ***'bin', 'spec', 'Gemfile' and 'Gemfile.lock'***  
    These folders and files provide ruby gem for this programme, including Rspec, colorize and tty-table.  
 2. ***'code_music.rb'***  
@@ -335,3 +362,8 @@ begin # use exception handling
 If the customer insert a wrong word, the system will let them know which words are valid. The hint is like this.  
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-17%20at%2020.18.43.png)
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-17%20at%2020.19.19.png)
+
+# Install
+
+#### After cloning or downloading the git repository of the link shown before, you need to make sure you have installed ruby, bundle, ruby gems of 'colorize', 'tty-table' and 'rspec'. Then, choosing one way to run the .rb file of ***'code_music.rb'*** (the instruction is shown in 'How to use' section). Finally, just follow the hint from the programme to finish the shopping process.
+
