@@ -21,6 +21,11 @@
 #### The second method is going to irb and load ***'code_music.rb'*** without change the codes above into valid code. Then enter them in irb environment like this.  
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-18%20at%2009.21.50.png)  
 
+# Install
+
+#### After cloning or downloading the git repository of the link shown before, you need to make sure you have installed ruby, bundle, ruby gems of 'colorize', 'tty-table' and 'rspec'. Then, choosing one way to run the .rb file of ***'code_music.rb'*** (the instruction is shown in 'How to use' section). Finally, just follow the hint from the programme to finish the shopping process.
+
+
 # Project Mnagement
 #### I use Trello to manage this project. Until now, the progress is like this.  
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-18%20at%2009.29.07.png)  
@@ -363,7 +368,4 @@ If the customer insert a wrong word, the system will let them know which words a
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-17%20at%2020.18.43.png)
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-17%20at%2020.19.19.png)
 
-# Install
-
-#### After cloning or downloading the git repository of the link shown before, you need to make sure you have installed ruby, bundle, ruby gems of 'colorize', 'tty-table' and 'rspec'. Then, choosing one way to run the .rb file of ***'code_music.rb'*** (the instruction is shown in 'How to use' section). Finally, just follow the hint from the programme to finish the shopping process.
 
