@@ -96,5 +96,5 @@ class CodeMusic < Order # CodeMusic class inherits from class Order
     end
 end
 
-# xinzhe = CodeMusic.new
-# xinzhe.shopping_in_CodeMusic
+shopping = CodeMusic.new
+shopping.shopping_in_CodeMusic
