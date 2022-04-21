@@ -371,6 +371,8 @@ If the customer insert a wrong word, the system will let them know which words a
 # Example Test
 
 1. Test in irb and choose pay by card:  
+   
 ![test1](/docs/Screen%20Shot%202022-04-21%20at%2010.25.49.png)
 2. Test in shell environment and choose pay by cash:  
+   
 ![test1](/docs/Screen%20Shot%202022-04-21%20at%2010.29.41.png)
