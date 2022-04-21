@@ -18,7 +18,11 @@
     xinzhe = CodeMusic.new
     xinzhe.shopping_in_CodeMusic
 ```
-#### The second method is going to irb and load ***'code_music.rb'*** without change the codes above into valid code. Then enter them in irb environment like this.  
+#### The second method is going to irb and load ***'code_music.rb'*** without change the codes above into valid code. Then inserting the code below in irb.
+```sh
+   load 'code_music.rb'
+```
+#### Now, you are in CodeMusic! Welcome!
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-18%20at%2009.21.50.png)  
 
 # Project Mnagement
