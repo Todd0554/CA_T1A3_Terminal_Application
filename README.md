@@ -7,9 +7,9 @@
 ***
 
 # How to use
-#### This application is based on ruby, so ruby needs to be installed to your computer. In addition, you also need to install bundle, ruby gem of tty-table and colorize.  
+#### This application is based on ruby, so ruby needs to be installed to your computer. In addition, you also need to install bundler, ruby gem of tty-table, colorize and rspec.  
 
-#### There are two ways to use this terminal application. Firstly, you can run ***'code_music.rb'*** directly in your terminal by using 'ruby code_music.rb'. However, before this, the code in line 99 and line 100 of ***'code_music.rb'*** must be transformed from notes into valid code like this.  
+#### After downloading or cloning the app from github, you need to go into *'src/code_music'* folder and then you will find several rb. files. There are two ways to use this terminal application. Firstly, you can run ***'code_music.rb'*** directly in your terminal by using 'ruby code_music.rb'. However, before this, the code in line 99 and line 100 of ***'code_music.rb'*** must be transformed from notes into valid code like this.  
 ```ruby
     # xinzhe = CodeMusic.new
     # xinzhe.shopping_in_CodeMusic
@@ -21,13 +21,8 @@
 #### The second method is going to irb and load ***'code_music.rb'*** without change the codes above into valid code. Then enter them in irb environment like this.  
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-18%20at%2009.21.50.png)  
 
-# Install
-
-#### After cloning or downloading the git repository of the link shown before, you need to make sure you have installed ruby, bundle, ruby gems of 'colorize', 'tty-table' and 'rspec'. Then, choosing one way to run the .rb file of ***'code_music.rb'*** (the instruction is shown in 'How to use' section). Finally, just follow the hint from the programme to finish the shopping process.
-
-
 # Project Mnagement
-#### I use Trello to manage this project. Until now, the progress is like this.  
+#### I use Trello to manage this project. Until now, the progress is like this. The project is seperated into 4 parts including code, PPT, Git and README.md. Code and Git are implemented together. PPT is planned before the presentation day. When the code part was almost done, the README.md started.  
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-18%20at%2009.29.07.png)  
 
 # Documentation  
@@ -46,12 +41,12 @@
 
 ## 4. 'src' Folder  
 
-#### This folder contains .rb files of the programms and in these files, the main code are saved.  
+#### This folder contains codes in different rb. files.  
 
 1. ***'bin', 'spec', 'Gemfile' and 'Gemfile.lock'***  
    These folders and files provide ruby gem for this programme, including Rspec, colorize and tty-table.  
 2. ***'code_music.rb'***  
-   This .rb file is the main programme of this terminal application. There is a class of ***CodeMusic*** inside and in this class, the method of ***'shopping_in_CodeMusic'*** contains complete process of shopping. The codes with notes are shown below.  
+   This .rb file is the main programme of this terminal application. There is a class of ***CodeMusic*** inside and in this class, the method of ***'shopping_in_CodeMusic'*** contains complete process of shopping. Please refer to the notes for specific process. The codes with notes are shown below.  
 ```ruby
 
     require './product_list'
@@ -155,7 +150,7 @@
     # xinzhe.shopping_in_CodeMusic
 ```
 3. ***'module_service.rb'***
-   This .rb file contains a module called ***'Service'***. This module has several methods which are basic methods for a shop. These methods can not only be used by CodeMusic, but also other shops, stores or supermarkets. The codes are shown below.
+   This .rb file contains a module called *'Service'*. This module has several methods which are basic methods for a shop. These methods can not only be used by CodeMusic, but also other shops, stores or supermarkets. The codes are shown below.
 ```ruby
     require 'colorize'
 
@@ -179,7 +174,7 @@
     end
 ```
 4. ***'order.rb'***  
-   This .rb file contains a class of ***'Order'***, which provide order methods including ***'show_price_list'*** and ***'get_price'*** for CodeMusic. The codes are shown below.  
+   This .rb file contains a class of *'Order'*, which provides order methods including ***'show_price_list'*** and ***'get_price'*** for CodeMusic. The codes are shown below.  
 ```ruby
     require './module_service'
     require 'colorize'
@@ -203,7 +198,7 @@
     end
 ```
 5. ***'product_list.rb'***  
-   This .rb file contains another module called ***'ProductList'***, and this module provides the logo of the terminal application, list of products and price and the table of the products. The codes are shown below.  
+   This .rb file contains another module called *'ProductList'*, and this module provides the logo of the terminal application, list of products and price and the table of the products. The codes are shown below.  
 ```ruby
     require 'colorize'
     require 'tty-table'
@@ -222,7 +217,7 @@
                         "reverb": 158, 
                         "delay": 188, 
                         "looper": 466}}
-        
+        # table established by tty-table
         LISTTABLE = TTY::Table.new(["Guitar", "Amplifier", "Pedal"], [["tele: 1600", "fishman: 650", "overdrive: 216"], ["gibson sg: 2336","marshall: 989", "reverb: 158"], ["stra: 1443", "blackstar: 455", "delay: 188"], ["maton: 1899","mesa: 999", "looper: 466"]])
         # code music LOGO
         LOGO = [' 
@@ -239,7 +234,7 @@
 ```
 # Gems Used  
 1. ***'rspec'***  
-   This gem is used to do rspec test for the programme. There are 3 main methods are tested in this section. The codes are below.  
+   This gem is used to do rspec test for the programme. There are 3 main methods are tested in this section. You can use code of ***'rspec'*** to check the testing result in ***'src'*** folder. The codes are below.  
 ```ruby
     require_relative '../product_list'
     require_relative '../code_music'
@@ -302,7 +297,7 @@
    ![result of colorize](/docs/Screen%20Shot%202022-04-17%20at%2019.54.46.png)
 # Features  
 #### 1. Shopping loop system   
-This feature let the customers continue to shop if they want to buy more products. I use boolean to control the end of the shopping like this. The notes give the explaination of every code.  
+This feature let the customers continue to shop if they want to buy more products. I use boolean to control the end of the shopping like this. The notes give the explaination of every line of code.  
 ```ruby
 while shopping == true # when shopping is true, the programme will continue 
             puts (ProductList::LISTTABLE).render(:ascii).colorize(:blue) # show the table of product list by using tty-table
@@ -339,7 +334,7 @@ while shopping == true # when shopping is true, the programme will continue
         end
 ```
 #### 2. Payment methods (cash or card)  
-the payment method depends on customers' choice. If they want to choose card, every thing gonna be easy, because they just need to tap the card. However, if they choose cash, the changes need to be calculated by the method.  
+the payment method depends on customers' choice. If they want to choose card, every thing gonna be easy, because they just need to tap the card. However, if they choose cash, the changes need to be calculated by the method. If the money customers insert is not enough, the programme will tell them to insert more money and all these money will be added together until the money is enough to pay.  
 ```ruby
 if how_to_pay == "card" # if customer use card
             pay_by_card()  # call pay_by_card
@@ -358,14 +353,20 @@ if how_to_pay == "card" # if customer use card
 This programme will let customer insert many text, so in order to prevent wrong inserts, the codes shown below are used.  
 ```ruby
 begin # use exception handling
-                    type = ProductList::LIST[music_instrument_type.to_sym]
-                    show_price_list(type)
-                rescue NoMethodError
-                    puts "Please insert guitar, amplifier or pedal.".colorize(:red) # if customer did not insert correct words of 'guitar', 'amplifier' and 'pedal', puts this to tell customer they insert wrong word
-                end
+    type = ProductList::LIST[music_instrument_type.to_sym]
+    show_price_list(type)
+    rescue NoMethodError
+        puts "Please insert guitar, amplifier or pedal.".colorize(:red) # if customer did not insert correct words of 'guitar', 'amplifier' and 'pedal', puts this to tell customer they insert wrong word
+    end
+end
 ```
-If the customer insert a wrong word, the system will let them know which words are valid. The hint is like this.  
+If the customer insert a wrong word, the system will let them know which words are valid. The hint is like this in red.  
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-17%20at%2020.18.43.png)
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-17%20at%2020.19.19.png)
 
+# Example Test
 
+1. Test in irb and choose pay by card:  
+![test1](/docs/Screen%20Shot%202022-04-21%20at%2010.25.49.png)
+2. Test in shell environment and choose pay by cash:  
+![test1](/docs/Screen%20Shot%202022-04-21%20at%2010.29.41.png)
