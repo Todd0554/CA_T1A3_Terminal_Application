@@ -24,9 +24,69 @@
 ```
 #### Now, you are in CodeMusic! Welcome!
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-18%20at%2009.21.50.png)  
-
+#### The programme will ask you to choose a type of music instrument you wanna buy.  
+```
+   What kind of music instruments do you want to buy, guitar, amplifier or pedal?
+```
+#### You can type anything here, but if the programme can't understand you which means you did not insert valid answer(here is guitar, amplifier or pedal), the programme will give you a hint and the table will show again.
+```
+Please insert guitar, amplifier or pedal.
++---------------+--------------+--------------+
+|Guitar         |Amplifier     |Pedal         |
++---------------+--------------+--------------+
+|tele: 1600     |fishman: 650  |overdrive: 216|
+|gibson sg: 2336|marshall: 989 |reverb: 158   |
+|stra: 1443     |blackstar: 455|delay: 188    |
+|maton: 1899    |mesa: 999     |looper: 466   |
++---------------+--------------+--------------+
+What kind of music instruments do you want to buy, guitar, amplifier or pedal?
+```
+#### After you insert a valid word, the programme will show you all the products of this type and ask "which one do you wanna buy?".
+```
+What kind of music instruments do you want to buy, guitar, amplifier or pedal?
+guitar
+tele: $1600
+gibson sg: $2336
+stra: $1443
+maton: $1899
+Which one do you want?
+```
+#### Here is same as before, you need to insert valid name of the product. Then, the programme will show the price of the product you choose to buy and ask you whether you want to contiunue.  
+```
+Which one do you want?
+tele
+The tele is 1600.0 dollars.
+Do you want to buy other products? y/n
+```
+#### You need to type y or n, otherwise the programme can't understand you. if you choose y, the shopping process will start again. However, if you choose n, the programme will show the total price and ask you whether you are a student of CA. If you are, there will be a discount on your payment.  
+```
+Do you want to buy other products? y/n
+n
+Totally 1600.0 dollar, are you a student of Code Academy? y/n
+y
+Thank you, the totally price is 1280.0, cash or card?
+```
+#### Then, the programme will ask you the method of payment. If you choose paying by card, everything gonna easy, just taping the card. However, if you choose cash, the programme will let you insert money in a number. If you insert words not valid and can't be understood by the programme, it will ask again. on the other hand, if the money you insert is not enough, the programme will save it and let you insert more money until the total money you insert is greater than or equal to the money you need to pay. Finally, the changes will be calculated. 
+```
+Thank you, the totally price is 1280.0, cash or card?
+cash
+Please insert money. (insert a number)
+900
+Sorry, the money is not enough, please insert more money.
+How much money do you want to insert?
+122
+Sorry, the money is not enough, please insert more money.
+How much money do you want to insert?
+233
+Sorry, the money is not enough, please insert more money.
+How much money do you want to insert?
+444
+Please check your changes, 419.0 dollar.
+Thank you for your coming and have a good day.
+```
 # Project Mnagement
-#### I use Trello to manage this project. Until now, the progress is like this. The project is seperated into 4 parts including code, PPT, Git and README.md. Code and Git are implemented together. PPT is planned before the presentation day. When the code part was almost done, the README.md started.  
+#### I use Trello to manage this project. The project is seperated into 4 parts including code, PPT, Git and README.md. Code and Git are implemented together. PPT is planned before the presentation day. When the code part was almost done, the README.md started.  
+#### The code part is seperated by the rb. files. When a file is finished, the tag of this file will be moved under finish. 
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-18%20at%2009.29.07.png)  
 
 # Documentation  
