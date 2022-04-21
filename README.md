@@ -19,7 +19,7 @@
     xinzhe.shopping_in_CodeMusic
 ```
 #### The second method is going to irb and load ***'code_music.rb'*** without change the codes above into valid code. Then inserting the code below in irb.
-```sh
+```ruby
    load 'code_music.rb'
 ```
 #### Now, you are in CodeMusic! Welcome!
@@ -298,7 +298,7 @@ Thank you for your coming and have a good day.
 ```
 # Gems Used  
 1. ***'rspec'***  
-   This gem is used to do rspec test for the programme. There are 3 main methods are tested in this section. You can use code of ***'rspec'*** to check the testing result in ***'src'*** folder. The codes are below.  
+   This gem is used to do rspec test for the programme. There are 3 main methods are tested in this section. You can use code of ***'rspec'*** to check the testing result in ***'src'*** folder. I choose serveral important calculation and produts showing methods to be tested. The codes are below.  
 ```ruby
     require_relative '../product_list'
     require_relative '../code_music'
@@ -361,7 +361,7 @@ Thank you for your coming and have a good day.
    ![result of colorize](/docs/Screen%20Shot%202022-04-17%20at%2019.54.46.png)
 # Features  
 #### 1. Shopping loop system   
-This feature let the customers continue to shop if they want to buy more products. I use boolean to control the end of the shopping like this. The notes give the explaination of every line of code.  
+This feature lets the customers continue to shop if they want to buy more products. I use boolean to control the end of the shopping like this. The notes give the explaination of every line of code.  
 ```ruby
 while shopping == true # when shopping is true, the programme will continue 
             puts (ProductList::LISTTABLE).render(:ascii).colorize(:blue) # show the table of product list by using tty-table
