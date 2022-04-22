@@ -7,3 +7,4 @@ source "https://rubygems.org"
 gem "tty-table"
 gem 'colorize', '~> 0.8.1'
 gem "rspec", "~> 3.11"
+gem "tty-prompt"
