@@ -9,18 +9,9 @@
 # How to use
 #### This application is based on ruby, so ruby needs to be installed to your computer. In addition, you also need to install bundler, ruby gem of tty-table, colorize and rspec.  
 
-#### After downloading or cloning the app from github, you need to go into *'src/code_music'* folder and then you will find several rb. files. There are two ways to use this terminal application. Firstly, you can run ***'code_music.rb'*** directly in your terminal by using 'ruby code_music.rb'. However, before this, the code in line 99 and line 100 of ***'code_music.rb'*** must be transformed from notes into valid code like this.  
-```ruby
-    # xinzhe = CodeMusic.new
-    # xinzhe.shopping_in_CodeMusic
+#### After downloading or cloning the app from github, you need to open your terminal go into *'src/code_music'* folder. Then, using the code below to run the programme directly. 
 ```
-```ruby
-    xinzhe = CodeMusic.new
-    xinzhe.shopping_in_CodeMusic
-```
-#### The second method is going to irb and load ***'code_music.rb'*** without change the codes above into valid code. Then inserting the code below in irb.
-```ruby
-   load 'code_music.rb'
+   ./code_music.rb
 ```
 #### Now, you are in CodeMusic! Welcome!
 ![Exceptional Handling](/docs/Screen%20Shot%202022-04-18%20at%2009.21.50.png)  
@@ -112,7 +103,7 @@ Thank you for your coming and have a good day.
 2. ***'code_music.rb'***  
    This .rb file is the main programme of this terminal application. There is a class of ***CodeMusic*** inside and in this class, the method of ***'shopping_in_CodeMusic'*** contains complete process of shopping. Please refer to the notes for specific process. The codes with notes are shown below.  
 ```ruby
-
+    #!/usr/bin/env ruby
     require './product_list'
     require './order'
     require './module_service'
