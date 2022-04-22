@@ -14,7 +14,7 @@
    ./code_music.rb
 ```
 #### Now, you are in CodeMusic! Welcome!
-![Exceptional Handling](/docs/Screen%20Shot%202022-04-18%20at%2009.21.50.png)  
+![Exceptional Handling](/docs/Screen%20Shot%202022-04-22%20at%2011.21.55.png)  
 #### The programme will ask you to choose a type of music instrument you wanna buy.  
 ```
    What kind of music instruments do you want to buy, guitar, amplifier or pedal?
@@ -421,9 +421,9 @@ If the customer insert a wrong word, the system will let them know which words a
 
 # Example Test
 
-1. Test in irb and choose pay by card:  
+1. Test choose pay by card:  
    
-![test1](/docs/Screen%20Shot%202022-04-21%20at%2010.25.49.png)
-2. Test in shell environment and choose pay by cash:  
+![test1](/docs/Screen%20Shot%202022-04-22%20at%2011.24.22.png)
+1. Test choose pay by cash:  
    
-![test1](/docs/Screen%20Shot%202022-04-21%20at%2010.29.41.png)
+![test1](/docs/Screen%20Shot%202022-04-22%20at%2011.24.52.png)
