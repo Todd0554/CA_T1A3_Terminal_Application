@@ -1,7 +1,7 @@
-require '../product_list'
-require '../code_music'
-require '../order'
-require '../module_service'
+require_relative '../product_list'
+require_relative '../code_music'
+require_relative '../order'
+require_relative '../module_service'
 
 describe Service do 
     it 'should caculate the change if customers want to use cash.' do # moudle Service: test of pay_by_cash method
