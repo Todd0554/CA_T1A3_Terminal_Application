@@ -7,15 +7,14 @@
 ***
 
 # How to use
-![Alt Text](/docs/Screen-Recording-2022-04-22-at-18.30.11.gif)
 #### This application is based on ruby, so ruby needs to be installed to your computer. In addition, you also need to install bundler, ruby gem of tty-table, tty-prompt, colorize and rspec.  
 
 #### After downloading or cloning the app from github, you need to open your terminal go into *'src/code_music'* folder. Then, using the code below to run the programme directly. 
 ```
-   ./code_music.rb
+   ./executive_coder_music.rb
 ```
 #### Now, you are in CodeMusic! Welcome!
-![Exceptional Handling](/docs/Screen%20Shot%202022-04-22%20at%2011.21.55.png#pic_center)  
+![Exceptional Handling](/docs/Screen%20Shot%202022-04-22%20at%2020.27.47.png)  
 #### Then, the programme will ask you to choose a type of music instrument you wanna buy. (here just show the function of the code, so there is no color of the words)  
 ```
 What kind of music instruments do you want to buy, guitar, amplifier or pedal?
@@ -119,7 +118,6 @@ Thank you for your coming and have a good day.
 2. ***'code_music.rb'***  
    This .rb file is the main programme of this terminal application. There is a class of ***CodeMusic*** inside and in this class, the method of ***'shopping_in_CodeMusic'*** contains complete process of shopping. Please refer to the notes for specific process. The codes with notes are shown below.  
 ```ruby
-    #!/usr/bin/env ruby
 require './product_list'
 require './order'
 require './module_service'
@@ -285,6 +283,15 @@ shopping.shopping_in_CodeMusic
                                                                                                         '.colorize(:blue)]
     end
 ```
+6. ***'executive_coder_music.rb'***
+   This file is used to executive the programme and the code is shown below.  
+```
+#!/usr/bin/env ruby
+require_relative './code_music.rb'
+
+shopping = CodeMusic.new
+shopping.shopping_in_CodeMusic
+```
 # Gems Used  
 1. ***'rspec'***  
    This gem is used to do rspec test for the programme. There are 3 main methods are tested in this section. You can use code of ***'rspec'*** to check the testing result in ***'src'*** folder. I choose serveral important calculation and produts showing methods to be tested. The codes are below.  
@@ -332,7 +339,7 @@ shopping.shopping_in_CodeMusic
     end
 ```
    The rspec test can be executed by using 'rspec' code under the path of 'src' folder. The result is shown below.  
-   ![result of rspec](/docs/Screen%20Shot%202022-04-17%20at%2018.39.48.png#pic_center)
+   ![result of rspec](/docs/Screen%20Shot%202022-04-17%20at%2018.39.48.png#pic_center)  
 2. ***'tty-table'***  
    ***'tty-table'*** is another ruby gem used in this programme. For this programme, ***'tty-table'*** is used to establish the table of the products. The code is shown below.  
 ```ruby
@@ -350,7 +357,7 @@ shopping.shopping_in_CodeMusic
    ![result of colorize](/docs/Screen%20Shot%202022-04-17%20at%2019.54.46.png#pic_center)
 4. ***'tty-prompt'***
    ***'tty-prompt'*** is the last ruby gem used in this programme, which gives more feeling of dynamic for the programme.  
-   ![Alt Text](/docs/Screen-Recording-2022-04-22-at-18.34.38.gif)
+   ![Alt Text](/docs/Screen-Recording-2022-04-22-at-21.01.31.gif)
    
 # Features  
 #### 1. Shopping loop system   
@@ -394,21 +401,21 @@ while shopping == true # when shopping is true, the programme will continue
 the payment method depends on customers' choice. If they want to choose card, every thing gonna be easy, because they just need to tap the card. However, if they choose cash, the changes need to be calculated by the method. If the money customers insert is not enough, the programme will tell them to insert more money and all these money will be added together until the money is enough to pay.  
 ```ruby
 if how_to_pay == "card" # if customer use card
-            pay_by_card()  # call pay_by_card
-        elsif how_to_pay == "cash" # if customer use cash
-            money_customer_paid = prompt.ask("Please insert money. (insert a number)".colorize(:green), convert: :float) do |q| # ask customer to insert money
-                                      q.convert(:float, "Wrong value of %{value} for %{type} conversion")
-                                      q.convert :float
-                                      q.messages[:convert?] = "Wrong value of %{value} for %{type} conversion"
-                                  end
+    pay_by_card()  # call pay_by_card
+elsif how_to_pay == "cash" # if customer use cash
+    money_customer_paid = prompt.ask("Please insert money. (insert a number)".colorize(:green), convert: :float) do |q| # ask customer to insert money
+                             q.convert(:float, "Wrong value of %{value} for %{type} conversion")
+                             q.convert :float
+                             q.messages[:convert?] = "Wrong value of %{value} for %{type} conversion"
+                          end
              
-            while money_customer_paid < @final_money # if the money inserted is not enough
+    while money_customer_paid < @final_money # if the money inserted is not enough
                 puts "Sorry, the money is not enough, please insert more money.".colorize(:red) # tell customer it is not enough
                 puts "How much money do you want to insert?".colorize(:yellow) # ask customer to insert more money
                 money_customer_paid += gets.chomp.to_f # save the money the customer insert until the money is enough
-            end
+    end
             pay_by_cash(@final_money, money_customer_paid) # calculate changes
-        end
+end
 ```
 #### 3. Exception handling  
 This programme will let customer insert many text, so in order to prevent wrong inserts, the codes shown below are used.  
@@ -431,4 +438,4 @@ If the customer insert a wrong word, the system will let them know which words a
 ![test1](/docs/Screen%20Shot%202022-04-22%20at%2019.09.34.png#pic_center)  
 1. Test choose pay by cash:  
    
-![test1](/docs/Screen%20Shot%202022-04-22%20at%2019.08.07.png#pic_center)  
+![test1](/docs/Screen%20Shot%202022-04-22%20at%2020.56.11.png)  
